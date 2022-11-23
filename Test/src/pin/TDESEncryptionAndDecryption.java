@@ -77,8 +77,9 @@ public class TDESEncryptionAndDecryption {
 		try {
 			String encr = tdes.TDESecnryption("4591530000000094", "1111");
 			System.out.println(encr);
-			String dec = tdes.TDESdecrypt(encr);
-			System.out.println(dec);
+				String dec = tdes.TDESdecrypt(encr);
+			
+			System.out.println(tdes.getXORFormat(tdes.getCardBlock("4591530000000094"), dec));
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("exception");
